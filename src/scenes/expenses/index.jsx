@@ -12,10 +12,11 @@ import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import { getTransactionRows } from "../../utils/utilityFunctions";
 import { categories } from "../../data/categories";
-const Income = () => {
+
+const Expense = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [rows, setRows] = useState(getTransactionRows("credit"));
+  const [rows, setRows] = useState(getTransactionRows("debit"));
 
   const handleCategoryChange = (event, rowId) => {
     const updatedRows = rows.map((row) =>
@@ -35,12 +36,12 @@ const Income = () => {
     { field: "description", headerName: "Description", flex: 5 },
     { field: "refNo", headerName: "Reference No.", flex: 3 },
     {
-      field: "credit",
-      headerName: "Credit amount",
+      field: "debit",
+      headerName: "Debit amount",
       flex: 1,
       renderCell: (params) => (
         <Typography color={colors.greenAccent[500]}>
-          ₹{params.row.credit}
+          ₹{params.row.debit}
         </Typography>
       ),
     },
@@ -51,11 +52,11 @@ const Income = () => {
       renderCell: (params) => (
         <FormControl fullWidth>
           <Select
-            value={params.row.category || "Select"}
+            value={params.row.category || ""}
             onChange={(e) => handleCategoryChange(e, params.id)}
             label="Category"
           >
-            {categories["credit"].map((cat, index) => (
+            {categories["debit"].map((cat, index) => (
               <MenuItem key={index} value={cat}>
                 {cat}
               </MenuItem>
@@ -88,7 +89,7 @@ const Income = () => {
 
   return (
     <Box m="20px">
-      <Header title="Income" subtitle="List of credit Transactions" />
+      <Header title="Expenses" subtitle="List of debit transactions" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -121,4 +122,4 @@ const Income = () => {
   );
 };
 
-export default Income;
+export default Expense;

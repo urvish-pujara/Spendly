@@ -1,0 +1,4 @@
+export const preferences = {
+  MIN_TRANSACTION_VALUE_TO_DISPLAY: 10,
+  RANDOM_TRANSACTION_MAX_VALUE: 100,
+};

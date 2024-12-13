@@ -1,1 +1,17 @@
-//
+export const categories = {
+  debit: [
+    "House",
+    "Groceries",
+    "Utilities",
+    "Personal",
+    "Dinner",
+    "Travel",
+    "Shopping",
+    "Recreation",
+    "Investment",
+    "Entertainment",
+    "Random",
+    "Other",
+  ],
+  credit: ["Salary", "Stocks", "Dividend", "Random", "Bonus", "Other"],
+};

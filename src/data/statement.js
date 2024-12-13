@@ -4,7 +4,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/467304883763/VARDHMAN/UTIB/9106576393/NA--",
     refNo: "TRANSFER TO 4897696162090",
-    debit: 420,
+    debit: "420",
     credit: "",
     balance: "1,86,392.11",
   },
@@ -13,7 +13,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/430862047887/GUJRAR R/YESB/paytmqr5dd/NA--",
     refNo: "TRANSFER TO 4897690162095",
-    debit: 40,
+    debit: "40",
     credit: "",
     balance: "1,86,352.11",
   },
@@ -22,7 +22,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/430877257817/FOOD JUN/YESB/paytmqrbi9/NA--",
     refNo: "TRANSFER TO 4897690162095",
-    debit: 250,
+    debit: "250",
     credit: "",
     balance: "1,86,102.11",
   },
@@ -31,7 +31,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/430967615531/Jio Prep/YESB/paytm-jiom/UPI--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 1000,
+    debit: "1000",
     credit: "",
     balance: "1,85,102.11",
   },
@@ -39,7 +39,7 @@ const transactions = [
     txnDate: "4 Nov 2024",
     description: "TO TRANSFER-UPI/DR/430968011609/Jio/YESB/jiofiberpa/UPI--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 1221.46,
+    debit: "1221.46",
     credit: "",
     balance: "1,83,880.65",
   },
@@ -48,7 +48,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/430991073084/Mina pak/YESB/paytmqrssq/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 20,
+    debit: "20",
     credit: "",
     balance: "1,83,860.65",
   },
@@ -57,7 +57,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/430969555080/RAGHUVAN/YESB/paytmqrc2o/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 75,
+    debit: "75",
     credit: "",
     balance: "1,83,785.65",
   },
@@ -66,7 +66,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/467548578578/DIPAKKUM/YESB/q224049836/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 47,
+    debit: "47",
     credit: "",
     balance: "1,83,738.65",
   },
@@ -75,7 +75,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/467507071524/TIRTH PR/SBIN/7046065770/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 400,
+    debit: "400",
     credit: "",
     balance: "1,83,338.65",
   },
@@ -83,7 +83,7 @@ const transactions = [
     txnDate: "5 Nov 2024",
     description: "DEBIT-APY_NOV24_Mont_1000_11700201570174030_500763407896--",
     refNo: "",
-    debit: 50,
+    debit: "50",
     credit: "",
     balance: "1,83,288.65",
   },
@@ -92,7 +92,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431126870139/GOVINDSI/BKID/mayur.mayu/Sent--",
     refNo: "TRANSFER TO 4897693162093",
-    debit: 97,
+    debit: "97",
     credit: "",
     balance: "1,83,191.65",
   },
@@ -101,7 +101,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/467721076524/JACKOFF /YESB/paytmqr5co/NA--",
     refNo: "TRANSFER TO 4897693162093",
-    debit: 4300,
+    debit: "4300",
     credit: "",
     balance: "1,78,891.65",
   },
@@ -110,7 +110,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431109937921/PREMSING/YESB/paytmqrt5w/NA--",
     refNo: "TRANSFER TO 4897693162093",
-    debit: 100,
+    debit: "100",
     credit: "",
     balance: "1,78,791.65",
   },
@@ -119,7 +119,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431295570162/FOOD JUN/YESB/paytmqr5w3/NA--",
     refNo: "TRANSFER TO 4897694162092",
-    debit: 230,
+    debit: "230",
     credit: "",
     balance: "1,78,561.65",
   },
@@ -128,7 +128,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431220817461/KANHAIYA/YESB/q830763864/NA--",
     refNo: "TRANSFER TO 4897694162092",
-    debit: 65,
+    debit: "65",
     credit: "",
     balance: "1,78,496.65",
   },
@@ -137,7 +137,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431321927836/ANAYA PA/YESB/paytmqr5dl/NA--",
     refNo: "TRANSFER TO 4897695162091",
-    debit: 62,
+    debit: "62",
     credit: "",
     balance: "1,78,434.65",
   },
@@ -146,7 +146,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431335136018/NIKHIL K/HDFC/pinelabs.1/Gener--",
     refNo: "TRANSFER TO 4897695162091",
-    debit: 300,
+    debit: "300",
     credit: "",
     balance: "1,78,134.65",
   },
@@ -155,7 +155,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431335195318/Phone Zone/UTIB/9725799533/NA--",
     refNo: "TRANSFER TO 4897695162091",
-    debit: 100,
+    debit: "100",
     credit: "",
     balance: "1,78,034.65",
   },
@@ -173,7 +173,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431441499572/DARYANI /YESB/paytmqr5zl/NA--",
     refNo: "TRANSFER TO 4897696162090",
-    debit: 150,
+    debit: "150",
     credit: "",
     balance: "1,59,884.65",
   },
@@ -191,7 +191,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431442319995/SAGAR ME/YESB/paytmqr59f/NA--",
     refNo: "TRANSFER TO 4897696162090",
-    debit: 235,
+    debit: "235",
     credit: "",
     balance: "1,58,649.65",
   },
@@ -209,7 +209,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431447509033/THAKKAR /YESB/paytmqr5s7/NA--",
     refNo: "TRANSFER TO 4897696162090",
-    debit: 40,
+    debit: "40",
     credit: "",
     balance: "1,57,609.65",
   },
@@ -227,7 +227,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431667745726/Jio Prep/YESB/paytm-jiom/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 799,
+    debit: "799",
     credit: "",
     balance: "1,55,030.65",
   },
@@ -236,7 +236,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431667888406/Rutva Ze/UTIB/gpay-11215/NA--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 10,
+    debit: "10",
     credit: "",
     balance: "1,55,020.65",
   },
@@ -245,7 +245,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/468214773834/Gandhi S/IDFB/gandhi.205/Sent--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 10,
+    debit: "10",
     credit: "",
     balance: "1,55,010.65",
   },
@@ -254,7 +254,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431647334369/SHAKIL S/BARB/sakilbatak/UPI--",
     refNo: "TRANSFER TO 4897691162095",
-    debit: 200,
+    debit: "200",
     credit: "",
     balance: "1,54,810.65",
   },
@@ -272,7 +272,7 @@ const transactions = [
     description:
       "TO TRANSFER-UPI/DR/431806287988/Jio Prep/YESB/paytm-jiom/NA--",
     refNo: "TRANSFER TO 4897693162093",
-    debit: 29,
+    debit: "29",
     credit: "",
     balance: "1,53,158.05",
   },
@@ -300,7 +300,7 @@ const transactions = [
       "BY TRANSFER-INB IMPS/431911328749/hsb-XX004-Amazon S/PCXQD6WPA--",
     refNo: "MAOO00202938007 MAOO00202938007",
     debit: "",
-    credit: 487,
+    credit: "487",
     balance: "1,53,645.05",
   },
   {
