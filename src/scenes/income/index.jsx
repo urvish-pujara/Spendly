@@ -7,10 +7,10 @@ import {
   FormControl,
 } from "@mui/material";
 import React, { useState } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { GridToolbar, DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import { getTransactionRows } from "../../utils/utilityFunctions";
+import { getTransactionRows, parseAmount } from "../../utils/utilityFunctions";
 import { categories } from "../../data/categories";
 const Income = () => {
   const theme = useTheme();
@@ -29,6 +29,10 @@ const Income = () => {
     setRows(updatedRows);
   };
 
+  const totalIncome = rows.reduce(
+    (total, row) => total + parseAmount(row.credit),
+    0
+  );
   const columns = [
     { field: "id", headerName: "ID" },
     { field: "txnDate", headerName: "Transaction Date", flex: 1 },
@@ -88,7 +92,7 @@ const Income = () => {
 
   return (
     <Box m="20px">
-      <Header title="Income" subtitle="List of credit Transactions" />
+      <Header title="Income" subtitle={`Total Income: ₹${totalIncome}`} />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -113,9 +117,16 @@ const Income = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid checkboxSelection rows={rows} columns={columns} />
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );

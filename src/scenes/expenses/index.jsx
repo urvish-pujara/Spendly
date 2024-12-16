@@ -5,22 +5,43 @@ import {
   MenuItem,
   Select,
   FormControl,
+  TextField,
 } from "@mui/material";
 import React, { useState } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { GridToolbar, DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import { getTransactionRows } from "../../utils/utilityFunctions";
+import { getTransactionRows, parseAmount } from "../../utils/utilityFunctions";
 import { categories } from "../../data/categories";
 
 const Expense = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [rows, setRows] = useState(getTransactionRows("debit"));
+  const [rows, setRows] = useState(
+    getTransactionRows("debit").map((row) => ({
+      ...row,
+      note: "", // Default note value
+      tags: "", // Default tags value
+    }))
+  );
 
   const handleCategoryChange = (event, rowId) => {
     const updatedRows = rows.map((row) =>
       row.id === rowId ? { ...row, category: event.target.value } : row
+    );
+    setRows(updatedRows);
+  };
+
+  const handleNoteChange = (event, rowId) => {
+    const updatedRows = rows.map((row) =>
+      row.id === rowId ? { ...row, note: event.target.value } : row
+    );
+    setRows(updatedRows);
+  };
+
+  const handleTagsChange = (event, rowId) => {
+    const updatedRows = rows.map((row) =>
+      row.id === rowId ? { ...row, tags: event.target.value } : row
     );
     setRows(updatedRows);
   };
@@ -30,11 +51,14 @@ const Expense = () => {
     setRows(updatedRows);
   };
 
+  const totalExpense = rows.reduce(
+    (total, row) => total + parseAmount(row.debit),
+    0
+  );
   const columns = [
     { field: "id", headerName: "ID" },
     { field: "txnDate", headerName: "Transaction Date", flex: 1 },
     { field: "description", headerName: "Description", flex: 5 },
-    { field: "refNo", headerName: "Reference No.", flex: 3 },
     {
       field: "debit",
       headerName: "Debit amount",
@@ -66,6 +90,36 @@ const Expense = () => {
       ),
     },
     {
+      field: "note",
+      headerName: "Note / Comment",
+      flex: 3,
+      renderCell: (params) => (
+        <TextField
+          fullWidth
+          value={params.row.note || ""}
+          onChange={(e) => handleNoteChange(e, params.id)}
+          placeholder="Enter a note"
+          variant="outlined"
+          size="small"
+        />
+      ),
+    },
+    {
+      field: "tags",
+      headerName: "Tags",
+      flex: 3,
+      renderCell: (params) => (
+        <TextField
+          fullWidth
+          value={params.row.tags || ""}
+          onChange={(e) => handleTagsChange(e, params.id)}
+          placeholder="Add tags (comma-separated)"
+          variant="outlined"
+          size="small"
+        />
+      ),
+    },
+    {
       field: "actions",
       headerName: "Actions",
       flex: 1,
@@ -89,7 +143,7 @@ const Expense = () => {
 
   return (
     <Box m="20px">
-      <Header title="Expenses" subtitle="List of debit transactions" />
+      <Header title="Expenses" subtitle={`Total Expense: ₹${totalExpense}`} />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -114,9 +168,16 @@ const Expense = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid checkboxSelection rows={rows} columns={columns} />
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );

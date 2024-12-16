@@ -4,9 +4,10 @@ export const transactionMap = {
     "BULK POSTING": "Dividend",
   },
   debit: {
-    HITESH: "House",
+    HITESHBH: "House",
     Jio: "Utilities",
-    mina: "House",
+    minapuj: "House",
+    hiteshpuj: "House",
     motka: "Personal",
     ayan: "Personal",
     chandan: "Personal",

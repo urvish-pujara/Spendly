@@ -2,7 +2,7 @@ import transactions from "../data/statement";
 import { preferences } from "../data/preferences";
 import { transactionMap } from "../data/transactionsMap";
 
-const parseAmount = (str) => {
+export const parseAmount = (str) => {
   if (typeof str === "string") return parseFloat(str.replace(/,/g, ""));
   return str;
 };
