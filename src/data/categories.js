@@ -13,5 +13,15 @@ export const categories = {
     "Random",
     "Other",
   ],
-  credit: ["Salary", "Stocks", "Dividend", "Random", "Bonus", "Other"],
+  credit: [
+    "Salary",
+    "Stocks",
+    "Dividend",
+    "Random",
+    "Bonus",
+    "Interest",
+    "Cashback",
+    "Refund",
+    "Other",
+  ],
 };

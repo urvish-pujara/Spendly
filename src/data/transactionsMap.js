@@ -10,6 +10,8 @@ export const transactionMap = {
     hiteshpuj: "House",
     motka: "Personal",
     ayan: "Personal",
+    mitul: "Personal",
+    Ayan: "Personal",
     chandan: "Personal",
   },
 };
